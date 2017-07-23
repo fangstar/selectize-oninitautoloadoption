@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Sselectize Tests</title>
+    <title>Selectize Tests</title>
 
     <style type="text/css">
 
@@ -86,50 +86,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 
                 <script>
-                // <select id="select-movie"></select>
                 $('#select-movie').selectize({
                     valueField: 'part_number',
                     labelField: 'part_number',
                     searchField: 'part_number',
                     options: [],
                     create: false,
-                    // render: {
-                    //     option: function(item, escape) {
-                    //         var actors = [];
-                    //         for (var i = 0, n = item.abridged_cast.length; i < n; i++) {
-                    //             actors.push('<span>' + escape(item.abridged_cast[i].name) + '</span>');
-                    //         }
-                    //         return '<div>' +
-                    //             '<img src="' + escape(item.posters.thumbnail) + '" alt="">' +
-                    //             '<span class="title">' +
-                    //                 '<span class="name">' + escape(item.title) + '</span>' +
-                    //             '</span>' +
-                    //             '<span class="description">' + escape(item.synopsis || 'No synopsis available at this time.') + '</span>' +
-                    //             '<span class="actors">' + (actors.length ? 'Starring ' + actors.join(', ') : 'Actors unavailable') + '</span>' +
-                    //         '</div>';
-                    //     }
-                    // },
                     preload: true,
-                    // load: function(query, callback) {
-                    //     if (!query.length) return callback();
-                    //     $.ajax({
-                    //         url: './api/models/part_numbers',
-                    //         type: 'GET',
-                    //         dataType: 'jsonp',
-                    //         data: {
-                    //             q: query,
-                    //             page_limit: 10
-                    //         //     apikey: '3qqmdwbuswut94jv4eua3j85'
-                    //         },
-                    //         error: function() {
-                    //             callback();
-                    //         },
-                    //         success: function(res) {
-                    //             console.log(res);
-                    //             // callback(res.movies);
-                    //         }
-                    //     });
-                    // },
                     onInitialize: function() {
                         var self = this;
                         $.ajax({
@@ -142,7 +105,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             success: function(res) {
                                 console.log(res);
                                 self.addOption(res);
-                                // callback(res.movies);
                             }
                         });
                     }
