@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Selectize Tests</title>
+    <title>Selectize onInit Remote API Example</title>
 
     <style type="text/css">
 
@@ -73,7 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div id="container">
     <div id="wrapper">
-        <h1>Selectize Tests</h1>
+        <h1>Selectize Example</h1>
             <div class="demo">
                 <h2>Loading from API</h2>
                 <p>This demo shows how to integrate third-party data, loaded asynchronously.</p>
